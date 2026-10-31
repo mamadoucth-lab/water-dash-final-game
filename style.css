@@ -4,7 +4,7 @@
   --grey: #e6e6e1;
   --mid: #888;
   --water: #1f8fd6;
-  --yellow: #ffc907; /* charity: water yellow */
+  --yellow: #ffc907;
   --font: ui-monospace, "SF Mono", Consolas, "Courier New", monospace;
 }
 
@@ -67,6 +67,17 @@ body {
 .start__footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 12px; font-size: .8rem; }
 .start__footer a { color: inherit; }
 
+.difficulty { margin-bottom: 24px; }
+.difficulty__label { display: block; font-size: .75rem; margin-bottom: 8px; }
+.difficulty__options { display: inline-flex; border: 2px solid var(--ink); }
+.difficulty label { position: relative; cursor: pointer; }
+.difficulty input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+.difficulty__options span { display: block; padding: 10px 18px; font-size: .9rem; font-weight: 700; }
+.difficulty label + label span { border-left: 2px solid var(--ink); }
+.difficulty label:hover input:not(:checked) + span { background: var(--grey); }
+.difficulty input:checked + span { background: var(--ink); color: var(--paper); }
+.difficulty input:focus-visible + span { outline: 3px solid var(--water); outline-offset: -5px; }
+
 /* ---------- Gameplay ---------- */
 .hud { display: flex; align-items: flex-end; gap: 24px; margin-bottom: 16px; }
 .meter { display: flex; flex-direction: column; gap: 4px; width: 240px; }
@@ -89,6 +100,7 @@ body {
 
 /* ---------- Results ---------- */
 .results { align-items: center; }
+.results__mode { margin: -8px 0 24px; font-size: .8rem; }
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; width: 100%; }
 .card { background: #fff; border: 2px solid var(--ink); padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
 .card__label { font-size: .75rem; }

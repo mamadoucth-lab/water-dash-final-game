@@ -19,6 +19,14 @@
       <div class="start__center">
         <h1 class="title">WATER DASH</h1>
         <p class="tagline">Run, don't spill, bring water home.</p>
+        <div class="difficulty" role="radiogroup" aria-labelledby="diffLabel">
+          <span class="difficulty__label" id="diffLabel">DIFFICULTY</span>
+          <div class="difficulty__options">
+            <label><input type="radio" name="difficulty" value="easy"><span>EASY</span></label>
+            <label><input type="radio" name="difficulty" value="normal" checked><span>NORMAL</span></label>
+            <label><input type="radio" name="difficulty" value="hard"><span>HARD</span></label>
+          </div>
+        </div>
         <div class="stack">
           <button class="btn btn--primary" id="playBtn">PLAY</button>
           <button class="btn" id="howBtn">HOW TO PLAY</button>
@@ -68,12 +76,12 @@
     <!-- 3. RESULTS -->
     <section class="screen results" data-screen="results" hidden>
       <h2 class="title title--small" id="resultTitle">YOU REACHED THE VILLAGE</h2>
+      <p class="results__mode" id="resMode"></p>
       <div class="cards">
         <div class="card"><span class="card__label">WATER DELIVERED</span><span class="card__value" id="resWater">0 L</span></div>
         <div class="card"><span class="card__label">PEOPLE HELPED</span><span class="card__value" id="resPeople">0</span></div>
         <div class="card"><span class="card__label">BEST</span><span class="card__value" id="resBest">0 L</span></div>
       </div>
-      <!-- TODO: replace with real facts, each verified against charitywater.org -->
       <div class="placeholder fact" id="factBox">Did you know? [Verified fact + source from charitywater.org]</div>
       <div class="stack stack--row">
         <button class="btn btn--primary" id="againBtn">PLAY AGAIN</button>
@@ -91,6 +99,6 @@
     <button class="btn btn--primary" id="closeHow">GOT IT</button>
   </dialog>
 
-  <script src="game.js" defer></script>
+  <script src="game.js"></script>
 </body>
 </html>
