@@ -56,7 +56,7 @@ body {
 
 /* ---------- Start ---------- */
 .start__top { display: flex; justify-content: space-between; align-items: flex-start; }
-.partner { padding: 18px 32px; }
+.partner { display: block; height: 64px; width: auto; }
 .start__center { margin: auto 0; padding: 24px 0; text-align: center; }
 .tagline { margin: 16px 0 32px; font-size: 1rem; }
 .start__scene { position: relative; height: 90px; border-bottom: 3px solid var(--ink); }
